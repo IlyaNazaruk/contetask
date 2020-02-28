@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block title %}Register{% endblock %}
+{% block body %}
+    <style>
+        .card-body{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .card{
+            margin-top: 50px;
+        }
+    </style>
+    <div class="row">
+        <div class="col-6 offset-3">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h1 class="text-center">Register form</h1>
+                    {{ form_start(form) }}
+                    {{ form_row(form.name, {'label': ' ', 'attr': {'class': 'form-control', 'placeholder': 'Name'}}) }}
+                    {{ form_row(form.lastname, {'label': ' ', 'attr': {'class': 'form-control', 'placeholder': 'Lastname'}}) }}
+                    {{ form_row(form.phonenumber, {'label': ' ', 'attr': {'class': 'form-control', 'placeholder': 'Phonenumber'}}) }}
+                    {{ form_row(form.referrer, {'label': ' ', 'attr': {'class': 'form-control', 'placeholder': 'Referrer'}}) }}
+                    {{ form_row(form.organization, {'label': ' ', 'attr': {'class': 'form-control', 'placeholder': 'Organization'}}) }}
+                    {{ form_row(form.password.first, {'label': ' ', 'attr': {'class': 'form-control', 'placeholder': 'Password'}}) }}
+                    {{ form_row(form.password.second, {'label': ' ', 'attr': {'class': 'form-control', 'placeholder': 'Repeat password'}}) }}
+                    <button class="btn btn-primary btn-block">Register</button>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

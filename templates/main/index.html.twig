@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<style>
+    .clearfix:after {
+        content: '';
+        display: table;
+        width: 100%;
+        clear: box;
+    }
+    .header {
+        background: #363636;
+    }
+    .header a {
+        color: #FFFFFF;
+        font-size: 20px;
+        float: right;
+        margin: 15px;
+    }
+    .header a:hover {
+        color: #727272;
+        text-decoration: none;
+    }
+    .header p {
+        float: left;
+        color: #FFFFFF;
+        font-size: 20px;
+        margin: 15px;
+    }
+    .wrapper {
+        padding-top: 50px;
+        margin: 0 auto;
+        width: 60%;
+
+    }
+</style>
+    <div class="container-fluid header clearfix">
+            <a class="btn btn-warning" href="{{ '/logout' }}">logout</a>
+    </div>
+
+    <div class="wrapper">
+        <h1>UserInfo:</h1>
+
+        <table class="table table-bordered">
+            <tbody>
+            <tr>
+                <td>
+                    <p>Phonenumber</p>
+                </td>
+                <td class="col-2">
+                    <p>{{ app.user.phonenumber }}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Name</p>
+                </td>
+                <td>
+                    <p>{{ app.user.name }}</p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
