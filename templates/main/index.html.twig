@@ -45,6 +45,22 @@
             <tbody>
             <tr>
                 <td>
+                    <p>Name</p>
+                </td>
+                <td>
+                    <p>{{ app.user.name }}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Lastname</p>
+                </td>
+                <td>
+                    <p>{{ app.user.lastname }}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <p>Phonenumber</p>
                 </td>
                 <td class="col-2">
@@ -53,10 +69,18 @@
             </tr>
             <tr>
                 <td>
-                    <p>Name</p>
+                    <p>Organization</p>
                 </td>
                 <td>
-                    <p>{{ app.user.name }}</p>
+                    <p>{{ app.user.organization }}</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Referrer</p>
+                </td>
+                <td>
+                    <p>{{ app.user.referrer }}</p>
                 </td>
             </tr>
             </tbody>
