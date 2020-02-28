@@ -22,7 +22,15 @@ class UserType extends AbstractType
             ->add('name')
             ->add('lastname')
             ->add('phonenumber')
-            ->add('referrer')
+            ->add('referrer', EntityType::class, [
+                'class' => User::class,
+                'choice_label' => function(User $user) {
+                    return strval($user->getLastname());
+                },
+                'required' => false,
+                'empty_data' => '',
+                'placeholder' => 'Choose the referrer',
+            ])
             ->add('organization')
             ->add('password', RepeatedType::class, array(
                 'type' => PasswordType::class,

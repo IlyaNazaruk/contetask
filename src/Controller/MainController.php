@@ -17,6 +17,8 @@ class MainController extends AbstractController
 
         $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 
+
+
         $name = $em->getRepository(User::class)->findAll();
 
         return $this->render('main/index.html.twig', [
