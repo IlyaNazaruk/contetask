@@ -50,7 +50,7 @@ CREATE TABLE `organization` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -59,6 +59,7 @@ CREATE TABLE `organization` (
 
 LOCK TABLES `organization` WRITE;
 /*!40000 ALTER TABLE `organization` DISABLE KEYS */;
+INSERT INTO `organization` VALUES (1,'Salo'),(2,'Salo'),(3,'Jungle'),(4,'Kabeli');
 /*!40000 ALTER TABLE `organization` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -78,7 +79,7 @@ CREATE TABLE `user` (
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `referrer` tinytext COLLATE utf8mb4_unicode_ci COMMENT '(DC2Type:object)',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -87,7 +88,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Ilya','Nazaruk','123123','Enadz','$2y$13$dfBz/iHcr2fm7MdAwuZRPOVyI3WI3SaYxYArfWRmivAUiftMttLUG',NULL),(2,'Maksim','Lush','37529123','Ujas','$2y$13$i.MydmsXVN0PYk1GU4zA3.y8.NqE8Wekl/YQzJvVgkdY5rhILUbjq',NULL),(3,'Vika','Golo','292278319','Ukkq','$2y$13$IfHe9G/E3esQgSiDdr3GW.lAHU4n0zPveHz0RO1yx026rcZEq1Spe',NULL),(4,'Roma','asd','987654321','Reqwe','$2y$13$vlBAJCNYOh3S3jbZT7QBH.jxgXLLOnr7Uf4ugr.If8VlJJzarIUfS',NULL),(5,'Raga','Inter','9379992','Iopa','$2y$13$5PHo3QporCelU.E4cpe33uQsh6mVDz9ULqbapuG0cLTnYJlQY8qSK',NULL),(6,'Mot','Utrer','6092726','Uiqwe','$2y$13$/uAx2iAzc7Yh8J16Gar4Ve.1spNXg8HU/.cMMmG5vuGynbm.D2CuW','App\\Entity\\User'),(7,'Sasha','Romo','541263','Hostiqwe','$2y$13$ZP.0AAIVMQnVCxdOfZmvae2tLH1pc.106fziiZFr6PylVmPbK.EHW','App\\Entity\\User'),(8,'Vika','Inter','12377123','Reqwe','$2y$13$EX9rfeCuMdne/2P3qQ9JE.rkmJSCPQPOm/.VxyI.LSaqAHDwrD92S','App\\Entity\\User'),(9,'Yue','Hao','51723','Uqweo','$2y$13$gW5gKYFt3aA9qPcRnO2N1etjPpD15DRkx4KlkJ8fc.35EjtzYwleW','Golo'),(10,'Kot','Inter','12431451','Oaspdp','$2y$13$TkEkKESgmvUdDmIgmX1IIePXc/x.nJvYZGy.IFswjKqgHhbmvwqJ2',NULL),(11,'Yuqh','asdlkj','6543','Psadjq','$2y$13$JzjMhTkUgDnyji7zrmpLk.AMEBVzaMmDqFLldtBd1lKeoSHRDET72',NULL),(12,'Lora','Brown','18238','Pqwke','$2y$13$i0vkRFQtRxEJT6fr/vCVEu5YrmVDZ5PxlKi34GsgvZ4o.liLv6RFa','Inter'),(13,'Raga','Inter','987654321','Iopa','$2y$13$K29kDwYiwjGa6hekOYahmeH6IGxOOHN35SeJmiaErm9BORFUcPepy',NULL),(14,'Ywqe','qwepo','91111','aslkdj','$2y$13$j63NhlXuSwxHAw/EKjuRpuyrhbGtV29bFzfuEFLBIDr5AlGBsZ3S6',NULL);
+INSERT INTO `user` VALUES (1,'Ilya','Nazaruk','123123','Enadz','$2y$13$dfBz/iHcr2fm7MdAwuZRPOVyI3WI3SaYxYArfWRmivAUiftMttLUG',NULL),(2,'Maksim','Lush','37529123','Ujas','$2y$13$i.MydmsXVN0PYk1GU4zA3.y8.NqE8Wekl/YQzJvVgkdY5rhILUbjq',NULL),(3,'Vika','Golo','292278319','Ukkq','$2y$13$IfHe9G/E3esQgSiDdr3GW.lAHU4n0zPveHz0RO1yx026rcZEq1Spe',NULL),(4,'Roma','asd','987654321','Reqwe','$2y$13$vlBAJCNYOh3S3jbZT7QBH.jxgXLLOnr7Uf4ugr.If8VlJJzarIUfS',NULL),(5,'Raga','Inter','9379992','Iopa','$2y$13$5PHo3QporCelU.E4cpe33uQsh6mVDz9ULqbapuG0cLTnYJlQY8qSK',NULL),(6,'Mot','Utrer','6092726','Uiqwe','$2y$13$/uAx2iAzc7Yh8J16Gar4Ve.1spNXg8HU/.cMMmG5vuGynbm.D2CuW','App\\Entity\\User'),(7,'Sasha','Romo','541263','Hostiqwe','$2y$13$ZP.0AAIVMQnVCxdOfZmvae2tLH1pc.106fziiZFr6PylVmPbK.EHW','App\\Entity\\User'),(8,'Vika','Inter','12377123','Reqwe','$2y$13$EX9rfeCuMdne/2P3qQ9JE.rkmJSCPQPOm/.VxyI.LSaqAHDwrD92S','App\\Entity\\User'),(9,'Yue','Hao','51723','Uqweo','$2y$13$gW5gKYFt3aA9qPcRnO2N1etjPpD15DRkx4KlkJ8fc.35EjtzYwleW','Golo'),(10,'Kot','Inter','12431451','Oaspdp','$2y$13$TkEkKESgmvUdDmIgmX1IIePXc/x.nJvYZGy.IFswjKqgHhbmvwqJ2',NULL),(11,'Yuqh','asdlkj','6543','Psadjq','$2y$13$JzjMhTkUgDnyji7zrmpLk.AMEBVzaMmDqFLldtBd1lKeoSHRDET72',NULL),(12,'Lora','Brown','18238','Pqwke','$2y$13$i0vkRFQtRxEJT6fr/vCVEu5YrmVDZ5PxlKi34GsgvZ4o.liLv6RFa','Inter'),(13,'Raga','Inter','987654321','Iopa','$2y$13$K29kDwYiwjGa6hekOYahmeH6IGxOOHN35SeJmiaErm9BORFUcPepy',NULL),(14,'Ywqe','qwepo','91111','aslkdj','$2y$13$j63NhlXuSwxHAw/EKjuRpuyrhbGtV29bFzfuEFLBIDr5AlGBsZ3S6',NULL),(15,'Kate','Laska','8583172','Zavod','$2y$13$Vy0zTA4/YJWLa8DWg3qC5O1VHXq7kiODFiISsr4hDXHJ6lqDIow4a',NULL),(16,'Frank','Lampard','54321','chelsea','$2y$13$fDq/XcB2YJl84geKLXLWBOnPNlC0eQ98IBdrUJJQ/G41GZGt6GgLq',NULL),(17,'Olya','Rain','7234076','Salo','$2y$13$0y/B3pBL0lCSkVFieEl6MepE2q5QOkd6jX99MiKb70NXkql4rFgHW',NULL),(18,'Gregor','Mac','744','Salo','$2y$13$m4jrVJbak7sFtrcyuRz9tuTa7MrRBNJ6yJNhToqq1BVIRadnDIH9e',NULL),(19,'Gregory','Macs','745','Salo','$2y$13$nULa9b/X2nRuNBong3If/.19MG2pe5LXSDMPh33U49j.BuWA/WPsy',NULL),(20,'Vlad','Domoc','322','Pol','$2y$13$t0LWgIAQEnKXJG/OIgEl0eap1i0f4QWHjinqUy8/VNMmfjUfPizB.','Rain'),(21,'Dima','Zhuk','831','Roter','$2y$13$XeyF0jNBVqlCyVt5OJbFUOAgacFlfDgWUQLII3CFZWE3XBbG4UoIO','Lampard'),(22,'Dsen','Jordan','845','Jungle','$2y$13$kQgna8Dmtz3hGujwS7MCOuHoBnDfM00ocl5sQ6QJPobf5JMCm0umK','Hao'),(23,'Kolya','Juni','378','Kabeli','$2y$13$UnGRvsA.QfPgpR6lcE1CYue9x/Y2Bb9QSfI7aqJ8SGy1tcyR4fLeC','Laska');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -100,4 +101,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-28 20:21:08
+-- Dump completed on 2020-02-29 15:30:35
