@@ -22,7 +22,6 @@ class RegistrationController extends AbstractController
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
         $user = new User();
-//        $organization = new Organization();
         $form = $this->createForm(UserType::class, $user);
 
 
@@ -34,12 +33,22 @@ class RegistrationController extends AbstractController
                     $form->get('password')->getData()
                 )
             );
+            $org = $form->get('organization')->getData();
+
+            $organizationEm = $this->getDoctrine()->getManager();
+
+            $organization = new Organization();
+            if (property_exists(Organization::class, $org) == False) {
+                $organization->setTitle($org);
+                $organizationEm->persist($organization);
+                $organizationEm->flush();
+            }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
             $entityManager->flush();
 
 
-            return $this->redirectToRoute('main');
+            return $this->redirectToRoute('app_login');
         }
 
 
